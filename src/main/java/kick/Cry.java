@@ -6,7 +6,6 @@ public class Cry implements KickStrategy {
 
     @Override
     public void kick(Charater whoKick, Charater oponnent) {
-        whoKick.kick(oponnent);
     }
     
 }
