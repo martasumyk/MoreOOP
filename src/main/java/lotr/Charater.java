@@ -1,6 +1,6 @@
 package lotr;
 
-import kick.Cry;
+
 import kick.KickStrategy;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,9 +10,10 @@ import lombok.Setter;
 public abstract class Charater {
     private int power;
     private int hp;
+    protected KickStrategy kickStrategy;
 
-    public void kick(Charater oponnent){
-        KickStrategy.kick(this, oponnent);
+    public Charater(KickStrategy kickStrategy) {
+        this.kickStrategy = kickStrategy;
     }
 
     boolean isAlive(){
@@ -27,7 +28,5 @@ public abstract class Charater {
         return this.getClass().getSimpleName() + "{hp=" + getHp() + ", power=" + getPower() + "}";
     }
 
-    public Charater(int i, int j, Cry cry) {
-    }
 
 }
