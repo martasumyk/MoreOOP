@@ -2,17 +2,14 @@ package lotr;
 
 import java.util.Random;
 
-import kick.KickStrategy;
+import kick.kingKick;
 
 public class King extends Charater {
 
-    private Random random = new Random();
+    private static Random random = new Random();
 
     public King() {
-        super(new kingKick());
-        setHp(random.nextInt(15));
-        setPower(random.nextInt(15));
+        super(random.nextInt(15), random.nextInt(15), new kingKick());
     }
-    }
-    
 }
+    
